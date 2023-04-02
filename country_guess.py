@@ -291,7 +291,7 @@ def check_answer():
 
 def help_btn(c):
     global score, health_value, times
-    help = int(selected_option.get())
+    help = selected_option.get()
     _len = len(c)   # Check the country_name length
     if times == 1:   # Check the times can be use help
         times += 1
@@ -417,7 +417,7 @@ Button(root, text='چک', bg='#ff73e0', font=('arial', 15, 'bold'), command=chec
 Button(root, text='عوض کردن کشور', bg='#F5F5DC', font=('arial', 10, 'normal'), command=country_change).place(x=87, y=131)
 
 # Radio buttons:
-selected_option = tk.StringVar()
+selected_option = tk.IntVar()
 # option1:
 help_1 = Radiobutton(root, text="نشان دادن یک الی دو حرف و گرفتن یک جان", variable=selected_option, value=1, bg='#F0F8FF', font=('arial', 12, 'normal'))
 help_1.pack
